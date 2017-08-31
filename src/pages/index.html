@@ -48,16 +48,49 @@
 				<h2 class="section__title">О проекте</h2>
 				<p>Конференция по фронтенду и веб-стандартам, проводится с 2009 года ежегодно в разных городах силами сообщества «<a href="http://web-standards.ru/">Веб-стандарты</a>». Участие — бесплатное. Хотите выступить или помочь? Пишите нам: <a href="mailto:wst@web-standards.ru">wst@web-standards.ru</a>.</p>
 				<p>Понравилась конференция?</p>
+
 				<form class="support" method="post" target="_blank" action="https://money.yandex.ru/quickpay/confirm.xml">
+
 					<input type="hidden" name="receiver" value="41001119329753">
 					<input type="hidden" name="formcomment" value="Сообщество «Веб-стандарты»">
 					<input type="hidden" name="short-dest" value="Поддержка «Веб-стандартов»">
 					<input type="hidden" name="targets" value="Поддержка «Веб-стандартов»">
 					<input type="hidden" name="quickpay-form" value="donate">
-					<input type="hidden" name="paymentType" value="AC">
-					<input class="support__amount" name="sum" value="500" size="4" required type="text">
+					<input type="hidden" name="successURL" value="https://wsd.events/">
+
+					<label for="support__amount">Сумма</label>
+					<input class="support__amount" id="support__amount" name="sum" value="500" size="4" required type="text">
+					<span class="support__currency">₽</span>
+
+					<input class="support__source" id="support__source--card" type="radio" name="paymentType" value="AC" checked>
+					<label class="support__label support__label--card" for="support__source--card">Банковская карта</label>
+
+					<input class="support__source" id="support__source--yandex" type="radio" name="paymentType" value="PC">
+					<label class="support__label support__label--card" for="support__source--yandex">Яндекс Деньги</label>
+
 					<button class="support__button button">Поддержать</button>
+
 				</form>
+
+				<!-- <form block="support" method="post" target="_blank" action="https://money.yandex.ru/quickpay/confirm.xml">
+
+					<input type="hidden" name="successURL" value="https://wsd.events/">
+
+					<label elem="amount-label" for="support-amount">Сумма</label>
+					<input elem="amount" type="text" size="4" name="sum" id="support-amount" required value="500">
+					<span elem="currency">₽</span>
+
+					<input elem="source" type="radio" name="paymentType" id="support-card" checked value="AC">
+					<label elem="source-label" mod="card" for="support-card">Банковская карта</label>
+
+					<input elem="source" type="radio" name="paymentType" id="support-yandex" value="PC">
+					<label elem="source-label" mod="yandex" for="support-yandex">Яндекс Деньги</label>
+
+					<button elem="button" mix="block:button">Поддержать</button>
+
+				</form> -->
+
+
 			</div>
 		</section>
 		<section class="section section--open" id="calendar">
